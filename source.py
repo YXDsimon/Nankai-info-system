@@ -4,6 +4,7 @@ def printL():
     for i in range(len(l)):
         print('{:<5}{:<15}{:<15}{:<15}{:<20}'.format(
             i+1, l[i][0], l[i][1], l[i][2], l[i][3]))
+l=[] #用来存储信息的list
 print("##############################################################################")
 print('                     南开大学软件学院通讯录管理系统v0.01a')
 print('')
@@ -20,7 +21,8 @@ if order == 'a':
     qq = input('请输入您的qq号码：')
     tel = input('请输入您的电话号码：')
     email = input('请输入您的邮箱：')
+    l.append([len(l+1),name,qq,tel,email])
     print('添加成功！')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~修改/添加数据~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    printL
-print('[{name:<{len}}x'.format(name=name+']',len=22-len(name.encode('GBK'))+len(name)))
+    printL()
+#print('[{name:<{len}}x'.format(name=name+']',len=22-len(name.encode('GBK'))+len(name)))
